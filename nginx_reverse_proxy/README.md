@@ -1,3 +1,3 @@
-Simpele nginx on 80 port and custom index.html
+Nginx reverse proxy to localhost:8080
 
 For testing and etc 
