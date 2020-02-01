@@ -5,6 +5,8 @@ RUN yum install -y epel-release && \
     rpm -Uvh remi-release-8*.rpm && \
     yum install -y php74-php php74-php-fpm && \
     ln -s /opt/remi/php74/root/usr/bin/php /usr/bin/php && \
-    ln -s /opt/remi/php74/root/usr/sbin/php-fpm /usr/sbin/php-fpm
+    ln -s /opt/remi/php74/root/usr/sbin/php-fpm /usr/sbin/php-fpm && \
+    rm -f /etc/opt/remi/php74/php-fpm.d/www.conf
+WORKDIR /var/www/host.example
 CMD /opt/remi/php74/root/usr/sbin/php-fpm --nodaemonize 
 
